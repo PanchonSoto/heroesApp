@@ -9,45 +9,40 @@ import { ListadoComponent } from './pages/listado/listado.component';
 
 const rutas: Routes = [
   {
-    path:'',
+    path: '',
     component: HomeComponent,
     children: [
       {
         path: 'listado',
-        component: ListadoComponent
+        component: ListadoComponent,
       },
       {
         path: 'agregar',
-        component: AgregarComponent
+        component: AgregarComponent,
       },
       {
         path: 'editar/:id',
-        component: AgregarComponent
+        component: AgregarComponent,
       },
       {
         path: 'buscar',
-        component: BuscarComponent
+        component: BuscarComponent,
       },
       {
         path: ':id',
-        component: HeroeComponent
+        component: HeroeComponent,
       },
       {
-        path:'**',
-        redirectTo: 'listado'
-      }
-    ]
-  }
-]
-
+        path: '**',
+        redirectTo: 'listado',
+      },
+    ],
+  },
+];
 
 @NgModule({
   declarations: [],
-  imports: [
-    RouterModule.forChild(rutas)
-  ],
-  exports: [
-    RouterModule
-  ]
+  imports: [RouterModule.forChild(rutas)],
+  exports: [RouterModule],
 })
-export class HeroesRoutingModule { }
+export class HeroesRoutingModule {}
