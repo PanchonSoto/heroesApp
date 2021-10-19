@@ -9,6 +9,9 @@ import { Router } from '@angular/router';
     .container {
       margin: 10px;
     }
+    mat-sidenav {
+      width: 300px;
+    }
   `
   ]
 })
